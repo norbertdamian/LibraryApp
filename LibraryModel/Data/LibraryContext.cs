@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using Herciu_Norbert_Lab2.Models;
+using LibraryModel.Models;
 
-namespace Herciu_Norbert_Lab2.Data
+namespace LibraryModel.Data
 {
     public class LibraryContext : DbContext
     {

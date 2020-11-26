@@ -5,10 +5,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Herciu_Norbert_Lab2.Models;
+using LibraryModel.Models;
 using Microsoft.EntityFrameworkCore;
-using Herciu_Norbert_Lab2.Data;
-using Herciu_Norbert_Lab2.Models.LibraryViewModels;
+using LibraryModel.Data;
+using LibraryModel.Models.LibraryViewModels;
 
 namespace Herciu_Norbert_Lab2.Controllers
 {

@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.DependencyInjection;
-using Herciu_Norbert_Lab2.Data;
+using LibraryModel.Data;
 
 namespace Herciu_Norbert_Lab2
 {
