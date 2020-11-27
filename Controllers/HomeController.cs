@@ -21,7 +21,10 @@ namespace Herciu_Norbert_Lab2.Controllers
         }
 
 
-
+        public IActionResult Chat()
+        {
+            return View();
+        }
         public IActionResult Index()
         {
             return View();

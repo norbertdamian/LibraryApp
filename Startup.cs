@@ -10,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using LibraryModel.Data;
 using Microsoft.EntityFrameworkCore;
+using Herciu_Norbert_Lab2.Hubs;
 
 namespace Herciu_Norbert_Lab2
 {
@@ -28,6 +29,8 @@ namespace Herciu_Norbert_Lab2
             services.AddControllersWithViews();
             services.AddDbContext<LibraryContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddSignalR();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -55,7 +58,11 @@ namespace Herciu_Norbert_Lab2
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapHub<ChatHub>("/chathub");
+
             });
+
+
         }
     }
 }
