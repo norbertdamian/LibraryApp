@@ -51,6 +51,7 @@ namespace Herciu_Norbert_Lab2
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -59,7 +60,7 @@ namespace Herciu_Norbert_Lab2
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapHub<ChatHub>("/chathub");
-
+                endpoints.MapRazorPages();
             });
 
 
